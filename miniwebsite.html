@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft UI Web Project</title>
+    <style>
+        /* Neumorphic Base Colors */
+        :root {
+            --bg: #e0e5ec;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+            --pink: #e91e63;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #444;
+        }
+
+        /* NEUMORPHIC NAVIGATION */
+        nav {
+            width: 100%;
+            background: var(--bg);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-btn {
+            border: none;
+            background: var(--bg);
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #777;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 6px 6px 12px var(--shadow-dark), 
+                       -6px -6px 12px var(--shadow-light);
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn.active {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                        inset -4px -4px 8px var(--shadow-light);
+            color: var(--pink);
+        }
+
+        /* CONTENT CARDS */
+        .page {
+            display: none;
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 0;
+        }
+
+        .page.active { display: block; }
+
+        .card {
+            background: var(--bg);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 12px 12px 24px var(--shadow-dark), 
+                        -12px -12px 24px var(--shadow-light);
+            text-align: center;
+        }
+
+        /* MEDIA STYLING */
+        img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 8px solid var(--bg);
+            box-shadow: 4px 4px 8px var(--shadow-dark), 
+                        -4px -4px 8px var(--shadow-light);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                        inset -4px -4px 8px var(--shadow-light);
+        }
+
+        audio {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        h2 { margin-top: 0; color: #333; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button class="nav-btn active" onclick="showTab('home', this)">Home</button>
+        <button class="nav-btn" onclick="showTab('about', this)">About</button>
+        <button class="nav-btn" onclick="showTab('contact', this)">Contact</button>
+    </nav>
+
+    <div id="home" class="page active">
+        <div class="card">
+            <h2>Image</h2>
+     <div style="height: 0; padding-bottom: calc(100.00%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2edd52ac0323c81c904cf" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>
+            <audio controls><source src="index-audio.mp3"></audio>
+            <h2>Acitivity video before</h2>
+  <div style="height: 521.74px; width: 280.00px; position:relative;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2ee5cd9c6d000afdc1135" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>
+        </div>
+    </div>
+
+    <div id="about" class="page">
+        <div class="card">
+            
+            <h2>My Hobby</h2>
+  <div style="height: 453.46px; width: 280.00px; position:relative;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2ef442e8f9919a304b0fc" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>
+            <audio controls><source src="about-audio.mp3"></audio>
+            <h2>Movie</h2>
+            <div style="height: 0; padding-bottom: calc(100.00%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2f2f3ebe913beb945e6fc" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"> <a href="https://www.kapwing.com/video-editor"></a></p>
+        </div>
+    </div>
+
+    <div id="contact" class="page">
+        <div class="card">
+            <h2>Contact</h2>
+            
+  <div style="height: 0; padding-bottom: calc(69.72%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2f5f4c28b02764cef34c5" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"><a href="https://www.kapwing.com/video-editor"></a></p>          
+            
+            
+            <audio controls><source src="contact-audio.mp3"></audio>
+            <h2>Life of an IT Student</h2>
+            <div style="height: 533.33px; width: 280.00px; position:relative;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/69a2f4913dd576ef16674471" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"> <a href="https://www.kapwing.com/video-editor"></a></p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(id, btn) {
+            // Hide all
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            
+            // Show selected
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
